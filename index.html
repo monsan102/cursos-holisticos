@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formación educativa Holística</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --accent-color: #7ed321;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        /* Main Menu */
+        .main-menu {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+        }
+        
+        .menu-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .menu-links li {
+            margin: 0 20px;
+        }
+        
+        .menu-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .menu-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .home-btn {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .home-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            text-align: center;
+            background-color: var(--light-bg);
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Students Image */
+        .students-image {
+            margin: 50px auto;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .students-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .students-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Featured Course */
+        .featured-course {
+            margin: 60px auto;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3a80d2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            max-width: 900px;
+        }
+        
+        .featured-course::before {
+            content: "CURSO ESTRELLA";
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 40px;
+            font-size: 14px;
+            font-weight: bold;
+            transform: rotate(45deg);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .featured-course h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .featured-course-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .featured-course-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .featured-course-text ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .featured-course-text li {
+            margin-bottom: 10px;
+        }
+        
+        .featured-course-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .featured-course-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--light-bg);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-card h3 {
+            margin: 20px 0;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-col h4 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-col p, .footer-col a {
+            display: block;
+            margin-bottom: 10px;
+            color: #ddd;
+            text-decoration: none;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+            transition: all 0.3s;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-links {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .menu-links li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .students-image {
+                max-width: 100%;
+            }
+            
+            .featured-course {
+                padding: 30px 20px;
+            }
+            
+            .featured-course::before {
+                font-size: 12px;
+                padding: 5px 30px;
+                right: -30px;
+                top: 15px;
+            }
+            
+            .featured-course h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FEH</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Menu Section -->
+    <section class="main-menu">
+        <div class="container">
+            <ul class="menu-links">
+                <li><a href="#" class="home-btn">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Formación educativa Holística</h1>
+            <p>Descubre el poder de desarrollar todo tu potencial a través de nuestros cursos de desarrollo personal</p>
+            
+            <!-- Students Image -->
+            <div class="students-image">
+                <img src="/api/placeholder/600/400" alt="Alumnos estudiando" />
+            </div>
+            
+            <a href="#cursos" class="home-btn" style="background-color: var(--primary-color); color: white;">Explora nuestros cursos</a>
+        </div>
+    </section>
+    
+    <!-- Featured Course -->
+    <section>
+        <div class="container">
+            <div class="featured-course">
+                <h2>Transformación Personal Integral</h2>
+                <div class="featured-course-content">
+                    <div class="featured-course-text">
+                        <p>Nuestro programa más completo y transformador para quienes buscan un cambio profundo en su vida personal y profesional.</p>
+                        <ul>
+                            <li>12 semanas de formación intensiva</li>
+                            <li>Sesiones personalizadas de coaching</li>
+                            <li>Material exclusivo y certificación</li>
+                            <li>Comunidad de apoyo permanente</li>
+                        </ul>
+                        <a href="#contacto" class="cta-button">¡Inscríbete ahora!</a>
+                    </div>
+                    <div class="featured-course-image">
+                        <img src="/api/placeholder/400/300" alt="Curso Transformación Personal Integral" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="cursos">
+        <div class="container">
+            <h2>Nuestros Cursos</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Desarrollo Personal</h3>
+                    <p>Descubre herramientas para potenciar tu crecimiento personal y alcanzar tus metas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Inteligencia Emocional</h3>
+                    <p>Aprende a gestionar tus emociones y mejorar tus relaciones interpersonales.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Mindfulness</h3>
+                    <p>Técnicas de atención plena para reducir el estrés y aumentar tu bienestar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="features" id="sobre-mi">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Misión</h3>
+                    <p>Transformar vidas a través de la educación holística, ayudando a las personas a desarrollar todo su potencial.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Experiencia</h3>
+                    <p>Más de 10 años dedicados a la formación en desarrollo personal y crecimiento holístico.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Filosofía</h3>
+                    <p>Creo en el equilibrio entre mente, cuerpo y espíritu como base del bienestar integral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="features" id="blog">
+        <div class="container">
+            <h2>Blog</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Últimos artículos</h3>
+                    <p>Explora nuestros contenidos sobre desarrollo personal, bienestar y crecimiento holístico.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Recursos gratuitos</h3>
+                    <p>Descarga materiales exclusivos para complementar tu formación personal.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Testimonios</h3>
+                    <p>Conoce las historias de transformación de nuestros alumnos y participantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Formación educativa Holística</h4>
+                    <p>Transformando vidas a través del desarrollo personal y la educación integral.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces rápidos</h4>
+                    <a href="#">Inicio</a>
+                    <a href="#sobre-mi">Sobre Mí</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#cursos">Cursos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p>Email: formacioneducativaholistica@gmail.com</p>
+                    <p>Teléfono: +34 XXX XXX XXX</p>
+                    <p>Dirección: Calle Principal 123, Ciudad</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Formación educativa Holística. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
