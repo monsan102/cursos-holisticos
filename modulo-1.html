@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 1 | Formación educativa Holística</title>
+  <style>
+    :root{--bg:#f7f3ec;--card:#fff;--text:#22313f;--muted:#5f6d79;--brand:#315c6b;--accent:#dd8a45;--line:rgba(34,49,63,.12)}
+    *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;color:var(--text);background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+    a{color:inherit} .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{padding:26px 0 8px} .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .logo{font-weight:800;color:var(--brand)} .btn{display:inline-flex;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid var(--line);background:#fff}
+    .hero{padding:26px 0 18px} .panel{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 18px 40px rgba(34,49,63,.08)}
+    .eyebrow{display:inline-block;background:rgba(221,138,69,.15);color:#a45f24;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:14px}
+    h1{margin:0 0 12px;font-size:clamp(32px,4vw,54px);line-height:1.05} p.lead{margin:0;color:var(--muted);line-height:1.65;font-size:17px;max-width:70ch}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:20px}
+    .box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+    .box h2{margin:0 0 14px;font-size:24px}
+    .media{display:grid;gap:14px}
+    video,audio{width:100%}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.65}
+    li{margin-bottom:10px}
+    .files a{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none}
+    .files a:last-child{border-bottom:0}
+    .note{color:var(--muted);font-size:14px;line-height:1.6}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="top">
+      <div class="logo">Formación educativa Holística</div>
+      <a class="btn" href="index.html">← Volver al inicio</a>
+    </div>
+  </header>
+  <main class="wrap hero">
+    <div class="panel">
+      <span class="eyebrow">Módulo 1</span>
+      <h1>Las emociones deciden el éxito escolar</h1>
+      <p class="lead">Página detalle del módulo 1. Aquí quedan listados los recursos del módulo y ya dejamos armado el espacio para incrustar el video, los audios y los materiales descargables.</p>
+    </div>
+    <div class="grid">
+      <section class="box">
+        <h2>Materiales del módulo</h2>
+        <div class="files">
+          <a href="Modulo%201/1.3%20Aristas_Socioemotional_Framework%20Mod%201.pptx">Presentación: Aristas_Socioemotional_Framework Mod 1.pptx</a>
+          <a href="Modulo%201/1.4%20Informe%20T%C3%A9cnico.docx">Informe técnico.docx</a>
+          <a href="Modulo%201/Evaluaci%C3%B3n%20M%C3%B3dulo%201.txt">Evaluación Módulo 1.txt</a>
+          <a href="Modulo%201/1.2%20infograf%C3%ADa%20mod-1.png">Infografía mod-1.png</a>
+          <a href="Modulo%201/1.2%20Comparaci%C3%B3n%20de%20modelos%20te%C3%B3ricos%20Mod.1.png">Comparación de modelos teóricos Mod.1.png</a>
+        </div>
+      </section>
+      <section class="box media">
+        <div>
+          <h2>Video</h2>
+          <video controls preload="metadata" src="Modulo%201/1.5%20Desarrollo_Adolescente%20M%C3%B3dulo%201.mp4"></video>
+        </div>
+        <div>
+          <h2>Audios</h2>
+          <audio controls src="Modulo%201/1.1%20Las_emociones_deciden_el_%C3%A9xito_escolar.m4a"></audio>
+          <audio controls src="Modulo%201/Las_emociones_deciden_el_%C3%A9xito_acad%C3%A9mico.m4a"></audio>
+        </div>
+      </section>
+    </div>
+    <section class="box" style="margin-top:18px">
+      <h2>Para seguir armando esta vista</h2>
+      <p class="note">En el siguiente paso podemos reemplazar estas listas por tarjetas con portada, embeber el contenido de manera más visual y conectar botones de descarga.</p>
+    </section>
+  </main>
+</body>
+</html>
