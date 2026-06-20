@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo 3 | Formación educativa Holística</title>
   <style>
-    :root{--bg:#f7f3ec;--card:#fff;--text:#22313f;--muted:#5f6d79;--brand:#315c6b;--accent:#dd8a45;--line:rgba(34,49,63,.12)}
-    *{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;color:var(--text);background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
-    a{color:inherit} .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    header{padding:26px 0 8px} .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-    .logo{font-weight:800;color:var(--brand)} .btn{display:inline-flex;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid var(--line);background:#fff}
-    .hero{padding:26px 0 18px} .panel{background:rgba(255,255,255,.82);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 18px 40px rgba(34,49,63,.08)}
+    :root{--bg:#f7f3ec;--card:#fff;--text:#22313f;--muted:#5f6d79;--brand:#315c6b;--accent:#dd8a45;--line:rgba(34,49,63,.12);--shadow:0 18px 40px rgba(34,49,63,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Segoe UI,Tahoma,sans-serif;color:var(--text);background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{padding:26px 0 8px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+    .logo{font-weight:800;color:var(--brand)}
+    .btn{display:inline-flex;padding:12px 16px;border-radius:14px;text-decoration:none;font-weight:700;border:1px solid var(--line);background:#fff}
+    .hero{padding:26px 0 18px}
+    .panel{background:rgba(255,255,255,.84);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
     .eyebrow{display:inline-block;background:rgba(221,138,69,.15);color:#a45f24;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;margin-bottom:14px}
-    h1{margin:0 0 12px;font-size:clamp(32px,4vw,54px);line-height:1.05} p.lead{margin:0;color:var(--muted);line-height:1.65;font-size:17px;max-width:70ch}
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:20px}
-    .box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+    h1{margin:0 0 12px;font-size:clamp(32px,4vw,54px);line-height:1.05}
+    p.lead{margin:0;color:var(--muted);line-height:1.65;font-size:17px;max-width:70ch}
+    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:20px}
+    .box{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
     .box h2{margin:0 0 14px;font-size:24px}
     .media{display:grid;gap:14px}
     video,audio{width:100%}
-    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.65}
-    li{margin-bottom:10px}
     .files a{display:block;padding:10px 0;border-bottom:1px solid var(--line);text-decoration:none}
     .files a:last-child{border-bottom:0}
-    .note{color:var(--muted);font-size:14px;line-height:1.6}
+    .note{color:var(--muted);font-size:14px;line-height:1.65}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{padding:8px 12px;border-radius:999px;background:rgba(49,92,107,.1);color:var(--brand);font-size:13px;font-weight:700}
     .image{width:100%;border-radius:18px;border:1px solid var(--line);display:block}
     @media (max-width:900px){.grid{grid-template-columns:1fr}}
   </style>
@@ -37,8 +43,14 @@
   <main class="wrap hero">
     <div class="panel">
       <span class="eyebrow">Módulo 3</span>
-      <h1>Habilidades socioemocionales, desempeño y bienestar</h1>
-      <p class="lead">Página detalle del módulo 3. Acá dejé listo el material visual, el video y el audio para que después podamos hacer una vista más rica de curso.</p>
+      <h1>Bienestar, habilidades socioemocionales y desempeño académico</h1>
+      <p class="lead">Este módulo cierra el recorrido con materiales sobre vínculo entre habilidades socioemocionales, desempeño escolar y bienestar. También incorpora el mapa de riesgos como pieza visual de apoyo.</p>
+      <div class="chips">
+        <span class="chip">Video central</span>
+        <span class="chip">Mapa de riesgos</span>
+        <span class="chip">Documento base</span>
+        <span class="chip">Audio de reflexión</span>
+      </div>
     </div>
     <div class="grid">
       <section class="box">
@@ -64,8 +76,8 @@
       </section>
     </div>
     <section class="box" style="margin-top:18px">
-      <h2>Próximo paso</h2>
-      <p class="note">Cuando quieras, convierto estas páginas en una experiencia tipo curso con bloques de reproducción, galerías y navegación entre módulos.</p>
+      <h2>Contexto del módulo</h2>
+      <p class="note">Aquí podemos sumar más adelante testimonios, líneas de tiempo o una galería de materiales. Por ahora queda conectado el núcleo del módulo con el documento, el video y la pieza visual.</p>
     </section>
   </main>
 </body>

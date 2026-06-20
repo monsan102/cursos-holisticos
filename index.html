@@ -20,11 +20,11 @@
     a{color:inherit}
     .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
     header{padding:34px 0 18px}
-    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .logo{font-weight:800;letter-spacing:.3px;color:var(--brand);font-size:22px}
     .hero{padding:56px 0 24px}
     .hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:28px;align-items:stretch}
-    .panel{background:rgba(255,255,255,.72);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}
+    .panel{background:rgba(255,255,255,.78);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}
     .hero-copy{padding:34px}
     .eyebrow{display:inline-block;background:rgba(49,92,107,.10);color:var(--brand);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:18px}
     h1{margin:0 0 14px;font-size:clamp(38px,5vw,64px);line-height:1.02}
@@ -48,15 +48,28 @@
     .course-card .tag{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(221,138,69,.14);color:#a45f24;font-size:12px;font-weight:800;margin-bottom:14px}
     .course-card h3{margin:0 0 8px;font-size:22px}
     .course-card p{margin:0;color:var(--muted);line-height:1.6}
+    .section-panel{background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:28px}
+    .split{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .info-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}
+    .info-card h3{margin:0 0 8px;font-size:20px;color:var(--brand)}
+    .info-card p{margin:0;color:var(--muted);line-height:1.65}
+    .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .resource-box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px}
+    .resource-box h3{margin:0 0 10px;font-size:18px;color:var(--brand)}
+    .resource-box ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.7}
+    .resource-box li{margin-bottom:8px}
     .footer{padding:34px 0 50px;color:var(--muted);font-size:14px}
-    @media (max-width:900px){.hero-grid,.cards{grid-template-columns:1fr}.brand{flex-direction:column;align-items:flex-start}.section-title{flex-direction:column;align-items:flex-start}}
+    @media (max-width:900px){.hero-grid,.cards,.split,.resource-grid{grid-template-columns:1fr}.brand{flex-direction:column;align-items:flex-start}.section-title{flex-direction:column;align-items:flex-start}}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap brand">
       <div class="logo">Formación educativa Holística</div>
-      <a class="btn secondary" href="#modulos">Ver módulos</a>
+      <div class="actions">
+        <a class="btn secondary" href="#sobre-formacion">Sobre la formación</a>
+        <a class="btn secondary" href="#modulos">Módulos</a>
+      </div>
     </div>
   </header>
   <main class="wrap">
@@ -83,6 +96,28 @@
         </div>
       </div>
     </section>
+    <section id="sobre-formacion">
+      <div class="section-title">
+        <h2>Sobre formación holística</h2>
+        <p>La propuesta base que da sentido al curso.</p>
+      </div>
+      <div class="section-panel">
+        <div class="split">
+          <div class="info-card">
+            <h3>Misión</h3>
+            <p>Transformar vidas a través de la educación holística, acompañando procesos de desarrollo personal, emocional y académico.</p>
+          </div>
+          <div class="info-card">
+            <h3>Filosofía</h3>
+            <p>Creemos en el equilibrio entre mente, cuerpo y espíritu como base del bienestar integral y del aprendizaje significativo.</p>
+          </div>
+          <div class="info-card">
+            <h3>Experiencia</h3>
+            <p>El curso recoge materiales, reflexiones y recursos educativos para trabajar habilidades socioemocionales en distintos contextos escolares.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="modulos">
       <div class="section-title">
         <h2>Módulos del curso</h2>
@@ -104,6 +139,32 @@
           <h3>Bienestar y desempeño académico</h3>
           <p>Documentos, video, mapa de riesgos e ideas para trabajar habilidades socioemocionales.</p>
         </a>
+      </div>
+    </section>
+    <section>
+      <div class="section-title">
+        <h2>Referencias y contexto</h2>
+        <p>Lecturas y materiales base que alimentan el curso.</p>
+      </div>
+      <div class="resource-grid">
+        <div class="resource-box">
+          <h3>Documentos de base</h3>
+          <ul>
+            <li>CURSO COMPLETO.docx</li>
+            <li>Desarrollo de habilidades socio.docx</li>
+            <li>Desarrollar habilidades socioemocionales.doc</li>
+            <li>importante para ppt.doc</li>
+          </ul>
+        </div>
+        <div class="resource-box">
+          <h3>Investigación y apoyo</h3>
+          <ul>
+            <li>Aristas-Marco-de-habilidades-socioemocionales-en-tercero-de-educacion-media.pdf</li>
+            <li>Reporte-12-Vinculo-habilidades-socioemocionales-sexto-primaria-desempeno-academico-bienestar.pdf</li>
+            <li>Silvera, L., El desarrollo.pdf</li>
+            <li>Taller-Tania-Presa-.pdf</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
